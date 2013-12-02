@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1ed0f54-3482-40c0-9be3-cacceccbae48" name="Default" comment="added autoload example">
+    <list default="true" id="a1ed0f54-3482-40c0-9be3-cacceccbae48" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home.php" afterPath="$PROJECT_DIR$/app/controllers/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/member.php" afterPath="$PROJECT_DIR$/app/models/member.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -52,7 +52,7 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="19" selection-start="25" selection-end="25" vertical-scroll-proportion="0.040767387" vertical-offset="0" max-vertical-offset="417">
+            <state line="6" column="2" selection-start="96" selection-end="96" vertical-scroll-proportion="0.24460432" vertical-offset="0" max-vertical-offset="417">
               <folding />
             </state>
           </provider>
@@ -273,7 +273,11 @@
       <created>1386002088483</created>
       <updated>1386002088483</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added autoload example">
+      <created>1386002856553</created>
+      <updated>1386002856553</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -405,7 +409,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="19" selection-start="25" selection-end="25" vertical-scroll-proportion="0.040767387" vertical-offset="0" max-vertical-offset="417">
+        <state line="6" column="2" selection-start="96" selection-end="96" vertical-scroll-proportion="0.24460432" vertical-offset="0" max-vertical-offset="417">
           <folding />
         </state>
       </provider>
