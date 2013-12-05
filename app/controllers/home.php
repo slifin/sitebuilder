@@ -34,17 +34,20 @@ class home {
 	}
 
 	function cortex($f3){
-		$member = new \models\member;
+
+		\models\members::setdown(); #delete existing tables
+		\models\articles::setdown();
+
+		$member = new \models\members; #bring models in (fluid enabled)
 		$article = new \models\articles;
 
-		\models\articles::setup();
-		$member->load(array('id = ?',1));
-	
-		$article->content = 'hello world';
-		$article->member_id = $member;
+		$member->name = 'slifin'; #save member
+		$member->save();
+
+		$article->content = 'hello world'; 
+		$article->member = $member; #assign saturated member to article
 		$article->save();
-		echo $article->id;
-		$db= $f3->get('DB');
-		echo $db->log();
+
+		echo $article->member->name; #profit
 	}
 } 

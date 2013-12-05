@@ -4,8 +4,8 @@ class articles extends \DB\Cortex{
 	protected
 	$fieldConf =
 	array(
-		'member_id'=>array(
-			'belongs-to-one'=>'\models\member',
+		'member'=>array(
+			'belongs-to-one'=>'\models\members',
 			'type'=>\DB\SQL\Schema::DT_INT
 			),
 		'content'=>array(
@@ -13,5 +13,6 @@ class articles extends \DB\Cortex{
 			)
 		),
 	$table = 'articles',
-	$db = 'DB';
+	$db = 'DB',
+	$fluid = TRUE;
 }
