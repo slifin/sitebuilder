@@ -7,9 +7,6 @@ class articles extends \DB\Cortex{
 		'member'=>array(
 			'belongs-to-one'=>'\models\members',
 			'type'=>\DB\SQL\Schema::DT_INT
-			),
-		'content'=>array(
-			'type'=>\DB\SQL\Schema::DT_TEXT
 			)
 		),
 	$table = 'articles',

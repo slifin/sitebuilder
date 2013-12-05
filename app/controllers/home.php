@@ -11,27 +11,7 @@ class home {
 	function docs($f3){
 		echo Template::instance()->render('foundationDocs.htm');
 	}
-	function setup($f3){
-		#cortex does this if you run \Model\user::setup($db,'users',$fieldConf);
-		$db = $f3->get('DB');
-		$schema = new \DB\SQL\Schema($db);
 
-		$schema->dropTable('members',TRUE);
-		$schema->dropTable('articles',TRUE);
-		$table = $schema->createTable('members');
-		$table->addColumn('name')->type_varchar(128);
-		$table->addColumn('articleID')->type_int();
-		$table->addColumn('date')->type_timestamp(TRUE);
-		$table->build();
-
-		$table = $schema->createTable('articles');
-		$table->addColumn('name')->type_varchar(128);
-		$table->addColumn('subject')->type_varchar(128);
-		$table->addColumn('content')->type_text();
-		$table->addColumn('date')->type_timestamp(TRUE);
-		$table->build();
-		echo 'tables built';
-	}
 
 	function cortex($f3){
 
@@ -49,5 +29,17 @@ class home {
 		$article->save();
 
 		echo $article->member->name; #profit
+
+		$id = $article->id; #remember a valid article id
+		unset($article,$member); #destory our saturated objects
+
+		$article = new \models\articles; #new object
+		$article->load(array('id = ?',$id)); #saturate it with id from above
+		echo $article->member->name; #navigate through relationship
+
+		$db = $f3->get('DB');
+		echo $db->log(); #ask ikkez why there isn't sub queries/joins here only singular queries
+
+
 	}
 } 
