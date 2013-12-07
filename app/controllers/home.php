@@ -11,7 +11,14 @@ class home {
 	function docs($f3){
 		echo Template::instance()->render('foundationDocs.htm');
 	}
-
+	function testAA($f3){
+		$aajoin = new \models\aa_join_game();
+		$all = $aajoin->find(array('g_id = ?',883));
+		foreach($all->castAll(2) as $k=>$v){ #ask ikkez about castAll doesn't seem to be documentated 
+		#I think it will cast objects up to the parameter depth, because aa_id is a mapper inside a mapper it is more than 1 level deep
+			echo $v['aa_id']['aa_deriv'];
+		}
+	}
 
 	function cortex($f3){
 
