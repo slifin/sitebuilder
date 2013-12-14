@@ -1,5 +1,4 @@
 <?php
-echo  "\e[31mHello World\e[0m";
 echo '<<< Starting Unit Tests'."\n";
 $f3 = require_once 'E:/xampp/htdocs/sitebuilder/vendor/bcosca/fatfree/lib/base.php';
 (new init)->root('E:/xampp/htdocs/sitebuilder/app')->db()->run();
@@ -15,7 +14,7 @@ foreach($test->results() as $k=>$v){
 	}else echo $v['text'].' -- Passed on '.basename($v['source'])."\n";
 }
 
-echo '<<< All Tests Successful';
+echo '<<< All Tests Successful'."\n";
 die(0);
 
 
