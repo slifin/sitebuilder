@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace models;
 class articles extends \DB\Cortex{
 	protected
@@ -12,4 +12,5 @@ class articles extends \DB\Cortex{
 	$table = 'articles',
 	$db = 'DB',
 	$fluid = TRUE;
+	public $test2 = 2;
 }
