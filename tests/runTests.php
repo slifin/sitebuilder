@@ -1,6 +1,7 @@
 <?php
 echo "\033[41mred\033[0m\n";
 die;
+
 $green = shell_exec('tput setaf 1;');
 
 echo $green.' test';
