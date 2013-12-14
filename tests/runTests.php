@@ -3,7 +3,6 @@ echo PHP_EOL;
 echo '<<< Starting Unit Tests'.PHP_EOL;
 $f3 = require_once 'E:/xampp/htdocs/sitebuilder/vendor/bcosca/fatfree/lib/base.php';
 (new init)->root('E:/xampp/htdocs/sitebuilder/app')->db()->run();
-
 $test = new Test;
 foreach(glob('./*.php') as $filename){
 	if ($filename == './'.basename(__FILE__)) continue;
