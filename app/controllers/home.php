@@ -3,7 +3,7 @@ namespace controllers;
 use Template;
 class home {
 	function beforeRoute($f3){
-		$f3->set('DB',new \DB\SQL('mysql:127.0.0.1;port=3306;dbname=db','root',''));
+		(new init)->db();
 	}
 	function index($f3){
 		echo Template::instance()->render('layout.htm');
@@ -14,7 +14,7 @@ class home {
 	function testAA($f3){
 		$aajoin = new \models\aa_join_game();
 		$all = $aajoin->find(array('g_id = ?',883));
-		foreach($all->castAll(2) as $k=>$v){ #ask ikkez about castAll doesn't seem to be documentated 
+		foreach($all->castAll(2) as $k=>$v){ #ask ikkez about castAll doesn't seem to be documentated
 		#I think it will cast objects up to the parameter depth, because aa_id is a mapper inside a mapper it is more than 1 level deep
 			echo $v['aa_id']['aa_deriv'];
 		}
@@ -31,7 +31,7 @@ class home {
 		$member->name = 'slifin'; #save member
 		$member->save();
 
-		$article->content = 'hello world'; 
+		$article->content = 'hello world';
 		$article->member = $member; #assign saturated member to article
 		$article->save();
 
@@ -49,4 +49,4 @@ class home {
 
 
 	}
-} 
+}
