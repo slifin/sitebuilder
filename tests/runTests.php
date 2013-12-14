@@ -10,12 +10,12 @@ foreach(glob('E:/xampp/htdocs/sitebuilder/tests/*.php') as $filename){
 foreach($test->results() as $k=>$v){
 	if (!$v['status']){
 		echo $v['text'].' -- Failed on '.$v['source'];
-		die(1);
+		exit(1);
 	}else echo $v['text'].' -- Passed on '.basename($v['source'])."\n";
 }
 
 echo '<<< All Tests Successful'."\n";
-die(0);
+exit(0);
 
 
 echo 'test';
