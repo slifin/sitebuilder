@@ -15,7 +15,6 @@ foreach($test->results() as $k=>$v){
 		echo $v['text'].' -- '.chr(27).'[41mFailed'.chr(27).'[0m on '.$v['source'];
 		die(1);
 	}else echo $v['text'].' -- '.chr(27).'[42mPassed'.chr(27).'[0m on '.basename($v['source']).PHP_EOL;
-
 }
 echo '<<< All Tests '.chr(27).'[42mSuccessful'.chr(27).'[0m';
 die(0);
