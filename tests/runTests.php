@@ -1,5 +1,6 @@
 <?php
-echo  "\e[31mHello World\e[0m";
+echo "\033[41mred\033[0m\n";
+die;
 $green = shell_exec('tput setaf 1;');
 
 echo $green.' test';
