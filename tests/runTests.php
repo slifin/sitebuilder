@@ -17,6 +17,8 @@ foreach($test->results() as $k=>$v){
 
 echo '<<< All Tests '.chr(27).'[42mSuccessful'.chr(27).'[0m';
 die(0);
+
+
 echo 'test';
 
 
