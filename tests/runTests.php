@@ -1,4 +1,5 @@
 <?php
+echo "\033[41mred\033[0m\n";
 
 
 echo '<<< Starting Unit Tests'."\n";
