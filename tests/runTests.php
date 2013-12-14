@@ -1,5 +1,6 @@
 <?php
-echo "\033[41mred\033[0m\n";
+echo "\033[0m";
+
 
 
 echo '<<< Starting Unit Tests'."\n";
@@ -12,7 +13,7 @@ foreach(glob('E:/xampp/htdocs/sitebuilder/tests/*.php') as $filename){
 }
 foreach($test->results() as $k=>$v){
 	if (!$v['status']){
-		echo $v['text'].' -- \033[41mFailed\033[0m on '.$v['source'];
+		echo $v['text']." -- \033[41mFailed\033[0m on ".$v['source'];
 		exit(1);
 	}else echo $v['text'].' -- Passed on '.basename($v['source'])."\n";
 }
