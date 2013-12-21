@@ -2,7 +2,6 @@
 echo "\033[0m";
 
 
-
 echo '<<< Starting Unit Tests'."\n";
 $f3 = require_once 'E:/xampp/htdocs/sitebuilder/vendor/bcosca/fatfree/lib/base.php';
 (new init)->root('E:/xampp/htdocs/sitebuilder/app')->db()->run();
